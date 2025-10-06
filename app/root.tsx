@@ -24,8 +24,10 @@ export const links: Route.LinksFunction = () => [
 ];
 
 import {registerLicense} from "@syncfusion/ej2-base";
+import * as process from "node:process";
 
-registerLicense(import.meta.env.VITE_SYNCFUSION_LICENSE_KEY)
+// @ts-ignore
+registerLicense(process.env.VITE_SYNCFUSION_LICENSE_KEY)
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
